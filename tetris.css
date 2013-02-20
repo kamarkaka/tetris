@@ -1,0 +1,99 @@
+.console {
+	width: 525px;
+	height: 684px;
+	margin: auto;
+	font-family: helvetica;
+}
+.gameboard {
+	width: 362px;
+	border: 5px solid #1A5283;
+	float: left;
+}
+.gameboard table {
+	margin: 0px;
+}
+.scoreboard {
+	background-color: white;
+	width: 148px;
+	margin: 0;
+	float: right;
+}
+.scoreboard div {
+	border: 5px solid #1A5283;
+	font-size: 51px;
+	font-weight: bold;
+	text-align: right;
+	margin-bottom: 5px;
+	height: 57px;
+}
+.gameboard2 {
+	border: 5px solid #1A5283;
+	float: right;
+}
+.controls {
+	background-color: white;
+	border: 5px solid #1A5283;
+	width: 138px;
+	height: 67px;
+	float: right;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 5px;
+	color: #1A5283;
+	font-weight: bold;
+	font-size: 27px;
+}
+.controls:hover {
+	background-color: silver;
+}
+
+.touchcontrols {
+	position: relative;
+	z-index: 1;
+}
+
+#arrow_up {
+	top: 381px;
+	left: 377px;
+	width: 138px;
+	height: 293px;
+	border: 5px solid #1A5283;
+	background-image: url('rotation_icon.png');
+	background-repeat: no-repeat;
+}
+#arrow_left {
+	top: -303px;
+	left: 0px;
+	width: 186px;
+	height: 582px;
+}
+#arrow_right {
+	top: -885px;
+	left: 186px;
+	width: 186px;
+	height: 582px;
+}
+
+#arrow_down {
+	top: -885px;
+	left: 0px;
+	width: 372px;
+	height: 102px;
+}
+
+#scene tr td {
+	width: 30px;
+	height: 30px;
+	color: silver;
+	border: 1px solid #99CCFF;
+}
+#scene_next tr td {
+	width: 30px;
+	height: 30px;
+}
+#scene_next tr td.scene {
+	background-color: white
+}
+#scene_next tr td.block {
+	background-color: grey
+}
