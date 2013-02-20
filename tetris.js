@@ -4,7 +4,7 @@ var result = new Array(),
 	block_in_scene,
 	gameplay,
 	scores = new Array(), score_up,
-	interval_handle, touch_interval_handle, touch_speed = 150, last_touch_timestamp = new Date().getTime(),
+	interval_handle, touch_interval_handle, touch_speed = 150,
 	scene = document.getElementById("scene"),
 	scene_next = document.getElementById("scene_next"),
 	speed, speed_txt = document.getElementById("speed"),
@@ -345,24 +345,13 @@ document.onkeydown = function(e){
 }
 
 document.getElementById("arrow_up").ontouchstart = function(e){
-	var ev = e || event,
-		curr_touch_timestamp = new Date().getTime();
-	
-	if(curr_touch_timestamp - last_touch_timestamp <= 300){//double tap
-		ev.preventDefault();
-	}
-	last_touch_timestamp = curr_touch_timestamp;
+	var ev = e || event;
+	ev.preventDefault();
 	block_move(0);
 }
 document.getElementById("arrow_down").ontouchstart = function(e){
-	var ev = e || event,
-		curr_touch_timestamp = new Date().getTime();
-	
-	if(curr_touch_timestamp - last_touch_timestamp <= 300){//double tap
-		ev.preventDefault();
-	}
-	last_touch_timestamp = curr_touch_timestamp;
-
+	var ev = e || event;
+	ev.preventDefault();
 	block_move(1);
 	if(touch_interval_handle) window.clearInterval(touch_interval_handle);
 	touch_interval_handle = window.setInterval(function(){
@@ -370,14 +359,8 @@ document.getElementById("arrow_down").ontouchstart = function(e){
 	}, touch_speed / 2);
 }
 document.getElementById("arrow_left").ontouchstart = function(e){
-	var ev = e || event,
-		curr_touch_timestamp = new Date().getTime();
-	
-	if(curr_touch_timestamp - last_touch_timestamp <= 300){//double tap
-		ev.preventDefault();
-	}
-	last_touch_timestamp = curr_touch_timestamp;
-
+	var ev = e || event;
+	ev.preventDefault();
 	block_move(2);
 	if(touch_interval_handle) window.clearInterval(touch_interval_handle);
 	touch_interval_handle = window.setInterval(function(){
@@ -385,14 +368,8 @@ document.getElementById("arrow_left").ontouchstart = function(e){
 	}, touch_speed);
 }
 document.getElementById("arrow_right").ontouchstart = function(e){
-	var ev = e || event,
-		curr_touch_timestamp = new Date().getTime();
-	
-	if(curr_touch_timestamp - last_touch_timestamp <= 300){//double tap
-		ev.preventDefault();
-	}
-	last_touch_timestamp = curr_touch_timestamp;
-
+	var ev = e || event;
+	ev.preventDefault();
 	block_move(3);
 	if(touch_interval_handle) window.clearInterval(touch_interval_handle);
 	touch_interval_handle = window.setInterval(function(){
